@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "JxHuRvP39qHMvoEPK3r7egxkGInq6LYMAnw2F+Y05gaUyR+yMheE5o2XWoso+XYyEcNtcjOmeHQ7KV/5n1yYAA==",
+  "success": true,
+  "projectFilePath": "/home/karch/User/Projects/Personal/C#/FitnessApp/BusinessLayer/BusinessLayer.csproj",
+  "expectedPackageFiles": [
+    "/home/karch/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.15/microsoft.aspnetcore.app.ref.8.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}
