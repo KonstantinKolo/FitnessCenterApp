@@ -18,8 +18,8 @@ namespace DataLayer
 
         public void Create(Member item)
         {
-            Membership membershipFromDb = dbContext.Memberships.Find(item.LastMembership.Id);
-            if (membershipFromDb != null) item.LastMembership = membershipFromDb;
+            Membership membershipFromDb = dbContext.Memberships.Find(item.Membership.Id);
+            if (membershipFromDb != null) item.Membership = membershipFromDb;
 
             dbContext.Members.Add(item);
             dbContext.SaveChanges();
@@ -36,7 +36,7 @@ namespace DataLayer
         {
             IQueryable<Member> query = dbContext.Members;
             if (useNavigationalProperties) query = query
-            .Include(b => b.LastMembership);
+            .Include(b => b.Membership);
 
             if (isReadOnly) query = query.AsNoTrackingWithIdentityResolution();
 
@@ -51,7 +51,7 @@ namespace DataLayer
         {
             IQueryable<Member> query = dbContext.Members;
             if (useNavigationalProperties) query = query
-            .Include(b => b.LastMembership);
+            .Include(b => b.Membership);
 
             if (isReadOnly) query = query.AsNoTrackingWithIdentityResolution();
 
@@ -60,7 +60,20 @@ namespace DataLayer
 
         public void Update(Member item, bool useNavigationalProperties = false)
         {
-            throw new NotImplementedException();
+            Member memberFromDb = Read(item.Id, useNavigationalProperties);
+
+            dbContext.Entry<Member>(memberFromDb).CurrentValues.SetValues(item);
+
+            dbContext.Entry<Member>(memberFromDb).CurrentValues.SetValues(item);
+
+            if (useNavigationalProperties)
+            {
+                Membership membershipFromDb = dbContext.Memberships.Find(item.Membership.Id);
+                if (memberFromDb != null) memberFromDb.Membership = membershipFromDb;
+                else memberFromDb.Membership = item.Membership;
+            }
+
+            dbContext.SaveChanges();
         }
     }
 }

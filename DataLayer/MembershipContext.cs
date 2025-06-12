@@ -18,9 +18,6 @@ namespace DataLayer
 
         public void Create(Membership item)
         {
-            Member memberFromDb = dbContext.Members.Find(item.Member.Id);
-            if (memberFromDb != null) item.Member = memberFromDb;
-
             dbContext.Memberships.Add(item);
             dbContext.SaveChanges();
         }
@@ -35,8 +32,6 @@ namespace DataLayer
         public Membership Read(int key, bool useNavigationalProperties = false, bool isReadOnly = false)
         {
             IQueryable<Membership> query = dbContext.Memberships;
-            if (useNavigationalProperties) query = query
-            .Include(b => b.Member);
 
             if (isReadOnly) query = query.AsNoTrackingWithIdentityResolution();
 
@@ -50,8 +45,6 @@ namespace DataLayer
         public List<Membership> ReadAll(bool useNavigationalProperties = false, bool isReadOnly = false)
         {
             IQueryable<Membership> query = dbContext.Memberships;
-            if (useNavigationalProperties) query = query
-            .Include(b => b.Member);
 
             if (isReadOnly) query = query.AsNoTrackingWithIdentityResolution();
 
@@ -63,13 +56,6 @@ namespace DataLayer
             Membership membershipFromDb = Read(item.Id, useNavigationalProperties);
 
             dbContext.Entry<Membership>(membershipFromDb).CurrentValues.SetValues(item);
-
-            if (useNavigationalProperties)
-            {
-                Member memberFromDb = dbContext.Members.Find(item.Member.Id);
-                if (memberFromDb != null) membershipFromDb.Member = memberFromDb;
-                else membershipFromDb.Member = item.Member;
-            }
 
             dbContext.SaveChanges();
         }

@@ -1,0 +1,12 @@
+/home/karch/User/Projects/Personal/C#/FitnessApp/BusinessLayer/bin/Debug/net8.0/BusinessLayer.deps.json
+/home/karch/User/Projects/Personal/C#/FitnessApp/BusinessLayer/bin/Debug/net8.0/BusinessLayer.dll
+/home/karch/User/Projects/Personal/C#/FitnessApp/BusinessLayer/bin/Debug/net8.0/BusinessLayer.pdb
+/home/karch/User/Projects/Personal/C#/FitnessApp/BusinessLayer/obj/Debug/net8.0/BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+/home/karch/User/Projects/Personal/C#/FitnessApp/BusinessLayer/obj/Debug/net8.0/BusinessLayer.AssemblyInfoInputs.cache
+/home/karch/User/Projects/Personal/C#/FitnessApp/BusinessLayer/obj/Debug/net8.0/BusinessLayer.AssemblyInfo.cs
+/home/karch/User/Projects/Personal/C#/FitnessApp/BusinessLayer/obj/Debug/net8.0/BusinessLayer.csproj.CoreCompileInputs.cache
+/home/karch/User/Projects/Personal/C#/FitnessApp/BusinessLayer/obj/Debug/net8.0/BusinessLayer.sourcelink.json
+/home/karch/User/Projects/Personal/C#/FitnessApp/BusinessLayer/obj/Debug/net8.0/BusinessLayer.dll
+/home/karch/User/Projects/Personal/C#/FitnessApp/BusinessLayer/obj/Debug/net8.0/refint/BusinessLayer.dll
+/home/karch/User/Projects/Personal/C#/FitnessApp/BusinessLayer/obj/Debug/net8.0/BusinessLayer.pdb
+/home/karch/User/Projects/Personal/C#/FitnessApp/BusinessLayer/obj/Debug/net8.0/ref/BusinessLayer.dll

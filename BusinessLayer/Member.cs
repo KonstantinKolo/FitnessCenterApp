@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -20,18 +21,17 @@ namespace BusinessLayer
         public string LastName { get; set; }
 
         [Required]
-        public Membership LastMembership { get; set; }
+        public Membership Membership { get; set; }
 
         public Member()
         {
             
         }
-        public Member(int id, string firstName, string lastName, Membership lastMembership)
+        public Member(string firstName, string lastName, Membership membership)
         {
-            Id = id;
             FirstName = firstName;
             LastName = lastName;
-            LastMembership = lastMembership;
+            Membership = membership;
         }
     }
 }

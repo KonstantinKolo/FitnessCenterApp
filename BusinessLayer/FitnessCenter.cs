@@ -25,12 +25,10 @@ namespace BusinessLayer
         {
             
         }
-        public FitnessCenter(int id, string address, string name, List<Employee> employeesList)
+        public FitnessCenter(string address, string name)
         {
-            Id = id;
             Address = address;
             Name = name;
-            EmployeesList = employeesList;
         }
     }
 }

@@ -23,7 +23,7 @@ namespace DataLayer
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
-                optionsBuilder.UseMySQL("Server=127.0.0.1;Database=FitnessDb;Uid=root;Pwd=frV5usnM;");
+                optionsBuilder.UseMySQL("Server=127.0.0.1;Database=FitnessDb;Uid=root;Pwd=root;");
             base.OnConfiguring(optionsBuilder);
         }
 

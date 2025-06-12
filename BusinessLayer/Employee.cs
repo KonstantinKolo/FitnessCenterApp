@@ -30,9 +30,8 @@ namespace BusinessLayer
         {
             
         }
-        public Employee(int id, string firstName, string lastName, string password, FitnessCenter workplace)
+        public Employee(string firstName, string lastName, string password, FitnessCenter workplace)
         {
-            Id = id;
             FirstName = firstName;
             LastName = lastName;
             Password = password;
