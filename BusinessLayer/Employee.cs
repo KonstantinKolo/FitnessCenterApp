@@ -20,7 +20,7 @@ namespace BusinessLayer
         public string LastName { get; set; }
 
         [Required]
-        [MaxLength(40, ErrorMessage = "Name cannot be more than 40 symbols!")]
+        [MaxLength(20, ErrorMessage = "Password cannot be more than 20 symbols!")]
         public string Password { get; set; }
 
         [Required]

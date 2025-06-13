@@ -93,7 +93,7 @@ namespace TestingLayer
             // Verify update
             Member updatedMember = memberContext.Read(member.Id, true);
             Assert.That(updatedMember.Membership.Id == testMembership.Id,
-                       "Update() does not update Member!");
+                       "UpdateWithNav() does not update Member!");
         }
 
         [Test]
@@ -129,12 +129,12 @@ namespace TestingLayer
                 Member testMember = memberContext.Read(memberId);
 
 
-                Assert.That(1 != 1,
+                Assert.That(false,
                             $"Deleted member with id {memberId} has beeb found!");
             }
             catch
             {
-                Assert.That(1 == 1);
+                Assert.That(true);
             }
         }
     }

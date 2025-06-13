@@ -19,7 +19,7 @@ namespace BusinessLayer
         [MaxLength(40, ErrorMessage = "Name cannot be more than 40 symbols!")]
         public string Name { get; set; }
 
-        public List<Employee> EmployeesList = new List<Employee>();
+        public List<Employee> EmployeesList { get; set;}
 
         public FitnessCenter()
         {
@@ -29,6 +29,7 @@ namespace BusinessLayer
         {
             Address = address;
             Name = name;
+            EmployeesList = new List<Employee>();
         }
     }
 }

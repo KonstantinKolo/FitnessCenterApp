@@ -41,8 +41,8 @@ namespace DataLayer
         public FitnessCenter Read(int key, bool useNavigationalProperties = false, bool isReadOnly = false)
         {
             IQueryable<FitnessCenter> query = dbContext.FitnessCenters;
-            if (useNavigationalProperties) query = query
-            .Include(b => b.EmployeesList);
+
+            if (useNavigationalProperties) query = query.Include(b => b.EmployeesList);
 
             if (isReadOnly) query = query.AsNoTrackingWithIdentityResolution();
 
@@ -76,6 +76,12 @@ namespace DataLayer
                 for (int i = 0; i < item.EmployeesList.Count; ++i)
                 {
                     Employee employeeFromDb = dbContext.Employees.Find(item.EmployeesList[i].Id);
+
+                    if ( i != 0 && employeeFromDb.Id == dbContext.Employees.Find(item.EmployeesList[i-1].Id).Id)
+                    {
+                        continue;
+                    }
+
                     if (employeeFromDb != null) employees.Add(employeeFromDb);
                     else employees.Add(item.EmployeesList[i]);
                 }
