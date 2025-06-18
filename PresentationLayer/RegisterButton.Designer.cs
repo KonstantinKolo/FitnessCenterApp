@@ -36,9 +36,9 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
-            comboBox1 = new ComboBox();
             label4 = new Label();
             button2 = new Button();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -115,15 +115,6 @@
             textBox3.Size = new Size(187, 23);
             textBox3.TabIndex = 7;
             // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(242, 347);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(187, 23);
-            comboBox1.TabIndex = 8;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -146,15 +137,24 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(335, 405);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 11;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged_1;
+            // 
             // RegisterButton
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 255, 128);
             ClientSize = new Size(512, 502);
+            Controls.Add(comboBox1);
             Controls.Add(button2);
             Controls.Add(label4);
-            Controls.Add(comboBox1);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -181,8 +181,8 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
-        private ComboBox comboBox1;
         private Label label4;
         private Button button2;
+        private ComboBox comboBox1;
     }
 }

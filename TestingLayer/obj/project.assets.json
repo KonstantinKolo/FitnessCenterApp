@@ -3462,35 +3462,42 @@
     ]
   },
   "packageFolders": {
-    "/home/karch/.nuget/packages/": {}
+    "C:\\Users\\Karch\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/karch/User/Projects/Personal/C#/FitnessApp/TestingLayer/TestingLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Karch\\FitnessCenterApp\\TestingLayer\\TestingLayer.csproj",
       "projectName": "TestingLayer",
-      "projectPath": "/home/karch/User/Projects/Personal/C#/FitnessApp/TestingLayer/TestingLayer.csproj",
-      "packagesPath": "/home/karch/.nuget/packages/",
-      "outputPath": "/home/karch/User/Projects/Personal/C#/FitnessApp/TestingLayer/obj/",
+      "projectPath": "C:\\Users\\Karch\\FitnessCenterApp\\TestingLayer\\TestingLayer.csproj",
+      "packagesPath": "C:\\Users\\Karch\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Karch\\FitnessCenterApp\\TestingLayer\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/karch/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Karch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/karch/User/Projects/Personal/C#/FitnessApp/BusinessLayer/BusinessLayer.csproj": {
-              "projectPath": "/home/karch/User/Projects/Personal/C#/FitnessApp/BusinessLayer/BusinessLayer.csproj"
+            "C:\\Users\\Karch\\FitnessCenterApp\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\Karch\\FitnessCenterApp\\BusinessLayer\\BusinessLayer.csproj"
             },
-            "/home/karch/User/Projects/Personal/C#/FitnessApp/DataLayer/DataLayer.csproj": {
-              "projectPath": "/home/karch/User/Projects/Personal/C#/FitnessApp/DataLayer/DataLayer.csproj"
+            "C:\\Users\\Karch\\FitnessCenterApp\\DataLayer\\DataLayer.csproj": {
+              "projectPath": "C:\\Users\\Karch\\FitnessCenterApp\\DataLayer\\DataLayer.csproj"
             }
           }
         }
@@ -3499,7 +3506,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -3541,18 +3554,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.15, 8.0.15]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.115/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -13,6 +13,11 @@ namespace ServiceLayer
 
         public List<int> FitnessCenterIds = new List<int>();
 
+        public FitnessCenterService()
+        {
+            FitnessCenterIds.Add(2); // for testing purposes
+        }
+
         public void CreateFitnessCenter(string address, string name)
         {
             try
@@ -28,7 +33,7 @@ namespace ServiceLayer
             }
         }
 
-        public Tuple<string,string> GetFitnessNameAndAddress(int fitnessCenterId)
+        public Tuple<string, string> GetFitnessNameAndAddress(int fitnessCenterId)
         {
             try
             {
@@ -65,6 +70,21 @@ namespace ServiceLayer
             {
                 throw new ArgumentException("Could not delete fitness center", ex);
             }
+        }
+
+        public Dictionary<int, string> LoadFitnessCenterNameAndId()
+        {
+            List<string> names = fitnessCenterContext.ReadAll().Select(e => e.Name).ToList();
+            List<int> ids = fitnessCenterContext.ReadAll().Select(e => e.Id).ToList();
+
+            Dictionary<int, string> output = new Dictionary<int, string>();
+
+            for (int i = 0; i < names.Count; i++)
+            {
+                output.Add(ids[i], names[i]);
+            }
+
+            return output;
         }
     }
 }

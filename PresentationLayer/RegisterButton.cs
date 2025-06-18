@@ -7,16 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataLayer;
-using BusinessLayer;
+using ServiceLayer;
 
 namespace PresentationLayer
 {
     public partial class RegisterButton : Form
     {
+        private int selectedFitness;
+
         public RegisterButton()
         {
             InitializeComponent();
+            LoadFitnessCenters();
         }
 
         private System.Windows.Forms.ComboBox comboBoxFitnessCenters;
@@ -24,14 +26,18 @@ namespace PresentationLayer
         private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.TextBox textBoxPassword;
 
+        private void LoadFitnessCenters()
+        {
+            var dict = FitnessInfo.fitnessCenterService.LoadFitnessCenterNameAndId();
+
+            comboBox1.DataSource = new BindingSource(dict, null);
+            comboBox1.DisplayMember = "Value";
+            comboBox1.ValueMember = "Key";
+
+        }
+
         private void RegisterButton_Load(object sender, EventArgs e)
         {
-            var context = new FitnessCenterContext(new FitnessDbContext());
-            var centers = context.ReadAll();
-
-            comboBoxFitnessCenters.DataSource = centers;
-            comboBoxFitnessCenters.DisplayMember = "Name";
-            comboBoxFitnessCenters.ValueMember = "Id";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,32 +53,41 @@ namespace PresentationLayer
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string firstName  = textBoxFirstName.Text.Trim();
-            string lastName = textBoxLastName.Text.Trim();
-            string password = textBoxPassword.Text;
+            string firstName = textBox1.Text.Trim();
+            string lastName = textBox2.Text.Trim();
+            string password = textBox3.Text;
 
-            if (comboBoxFitnessCenters.SelectedItem == null)
+            if (selectedFitness == null)
             {
                 MessageBox.Show("Моля, изберете фитнес център.");
                 return;
             }
 
-            var selectedCenter = (FitnessCenter)comboBoxFitnessCenters.SelectedItem;
+            FitnessInfo.employeeService.CreateEmployee(firstName,
+                lastName, password, selectedFitness);
 
-            var newEmployee = new Employee(firstName, lastName, password, selectedCenter);
+            // var selectedCenter = (FitnessCenter)comboBoxFitnessCenters.SelectedItem;
 
-            var context = new EmployeeContext(new FitnessDbContext());
+            // var newEmployee = new Employee(firstName, lastName, password, selectedCenter);
+
+            // var context = new EmployeeContext(new FitnessDbContext());
 
             try
             {
-                context.Create(newEmployee);
-                MessageBox.Show("Регистрацията е успешна!", "Успех");
-                this.Close(); 
+                //context.Create(newEmployee);
+                MessageBox.Show("Регистрацията е успешна!", "Izchakaite nqkolko minuti.");
+                this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Грешка при регистрация: {ex.Message}", "Грешка");
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            int selectedId = ((KeyValuePair<int, string>)comboBox1.SelectedItem).Key;
+            selectedFitness = selectedId;
         }
     }
 }
