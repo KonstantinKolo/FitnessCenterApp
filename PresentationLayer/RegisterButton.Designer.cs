@@ -114,6 +114,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(187, 23);
             textBox3.TabIndex = 7;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // label4
             // 
@@ -140,7 +141,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(335, 405);
+            comboBox1.Location = new Point(242, 347);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 11;

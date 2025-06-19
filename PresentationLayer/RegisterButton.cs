@@ -19,6 +19,8 @@ namespace PresentationLayer
         {
             InitializeComponent();
             LoadFitnessCenters();
+
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private System.Windows.Forms.ComboBox comboBoxFitnessCenters;
@@ -75,7 +77,7 @@ namespace PresentationLayer
             try
             {
                 //context.Create(newEmployee);
-                MessageBox.Show("Регистрацията е успешна!", "Izchakaite nqkolko minuti.");
+                MessageBox.Show("Регистрацията е успешна!");
                 this.Close();
             }
             catch (Exception ex)
@@ -88,6 +90,11 @@ namespace PresentationLayer
         {
             int selectedId = ((KeyValuePair<int, string>)comboBox1.SelectedItem).Key;
             selectedFitness = selectedId;
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
