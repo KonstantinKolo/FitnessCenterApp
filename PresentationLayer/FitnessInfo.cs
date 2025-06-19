@@ -10,11 +10,13 @@ namespace PresentationLayer
     {
         static public FitnessCenterService fitnessCenterService;
         static public EmployeeService employeeService;
+        static public MemberService memberService;
 
         static FitnessInfo()
         {
             fitnessCenterService = new FitnessCenterService();
             employeeService = new EmployeeService();
+            memberService = new MemberService();
         }
 
     }

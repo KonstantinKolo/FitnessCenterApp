@@ -1,12 +1,103 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Karch\\FitnessCenterApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\karch\\fitnesscenterapp\\presentationlayer\\fitnessinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\fitnessinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\karch\\fitnesscenterapp\\presentationlayer\\presentationlayer.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\presentationlayer.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\karch\\fitnesscenterapp\\presentationlayer\\registerbutton.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\registerbutton.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\karch\\fitnesscenterapp\\presentationlayer\\registerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\registerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\karch\\fitnesscenterapp\\presentationlayer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PresentationLayer",
+              "DocumentMoniker": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\PresentationLayer.csproj",
+              "RelativeDocumentMoniker": "PresentationLayer\\PresentationLayer.csproj",
+              "ToolTip": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\PresentationLayer.csproj",
+              "RelativeToolTip": "PresentationLayer\\PresentationLayer.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-19T12:40:54.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterButton.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\RegisterButton.Designer.cs",
+              "RelativeDocumentMoniker": "PresentationLayer\\RegisterButton.Designer.cs",
+              "ToolTip": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\RegisterButton.Designer.cs",
+              "RelativeToolTip": "PresentationLayer\\RegisterButton.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T12:40:37.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegisterButton.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\RegisterButton.cs",
+              "RelativeDocumentMoniker": "PresentationLayer\\RegisterButton.cs",
+              "ToolTip": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\RegisterButton.cs [Design]",
+              "RelativeToolTip": "PresentationLayer\\RegisterButton.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T12:40:20.922Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FitnessInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\FitnessInfo.cs",
+              "RelativeDocumentMoniker": "PresentationLayer\\FitnessInfo.cs",
+              "ToolTip": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\FitnessInfo.cs",
+              "RelativeToolTip": "PresentationLayer\\FitnessInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T12:38:16.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\Program.cs",
+              "RelativeDocumentMoniker": "PresentationLayer\\Program.cs",
+              "ToolTip": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\Program.cs",
+              "RelativeToolTip": "PresentationLayer\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T12:38:14.802Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
