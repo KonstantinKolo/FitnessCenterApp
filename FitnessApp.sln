@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingLayer", "TestingLaye
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{35CE9831-2180-402E-82F9-534DC5BD1D70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamplePresentationLayer", "ExamplePresentationLayer\ExamplePresentationLayer.csproj", "{2FE1D104-6C0B-425F-84BB-7C0A84D6FF0A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationLayer", "PresentationLayer\PresentationLayer.csproj", "{3AD64F04-096D-496F-BADA-59CEC67B0698}"
 EndProject
 Global
