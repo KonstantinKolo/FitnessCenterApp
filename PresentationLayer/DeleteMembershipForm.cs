@@ -34,6 +34,7 @@ namespace PresentationLayer
                 {
                     FitnessInfo.memberService.DeleteMember(memberId);
                     MessageBox.Show("Членът е изтрит успешно.");
+                    this.Hide();
                 }
                 catch (Exception ex)
                 {

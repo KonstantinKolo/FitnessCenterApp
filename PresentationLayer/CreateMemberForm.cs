@@ -36,6 +36,7 @@ namespace PresentationLayer
             {
                 FitnessInfo.memberService.CreateMember(firstName, lastName);
                 MessageBox.Show("Членът е създаден успешно!");
+                this.Hide();
             }
             catch (Exception ex)
             {

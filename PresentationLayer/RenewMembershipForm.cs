@@ -31,6 +31,7 @@ namespace PresentationLayer
             {
                 FitnessInfo.memberService.RenewMembership(memberId, days);
                 MessageBox.Show("Абонаментът е подновен.");
+                this.Hide();
             }
             catch (Exception ex)
             {

@@ -104,3 +104,8 @@ C:\Users\Karch\FitnessCenterApp\PresentationLayer\obj\Debug\net8.0-windows\ref\P
 C:\Users\Karch\FitnessCenterApp\PresentationLayer\bin\Debug\net8.0-windows\ServiceLayer.dll
 C:\Users\Karch\FitnessCenterApp\PresentationLayer\bin\Debug\net8.0-windows\ServiceLayer.pdb
 C:\Users\Karch\FitnessCenterApp\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.MemberControllForm.resources
+C:\Users\Karch\FitnessCenterApp\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.CheckMembershipForm.resources
+C:\Users\Karch\FitnessCenterApp\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.CreateMemberForm.resources
+C:\Users\Karch\FitnessCenterApp\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.DeleteMembershipForm.resources
+C:\Users\Karch\FitnessCenterApp\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.GetMemberIdForm.resources
+C:\Users\Karch\FitnessCenterApp\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.RenewMembershipForm.resources

@@ -26,6 +26,8 @@ namespace ServiceLayer
 
                 Member member = new Member(firstName, lastName, new Membership((DateTime)endDate));
 
+                Console.WriteLine(member.Membership.EndDate);
+
                 memberContext.Create(member);
                 MemberIds.Add(member.Id);
 
@@ -62,8 +64,9 @@ namespace ServiceLayer
         {
             try
             {
-                Member member = memberContext.Read(memberId);
-                return member.Membership.EndDate > DateTime.Now;
+                Member member = memberContext.Read(memberId, true);
+                Membership membership = membershipContext.Read(member.Membership.Id);
+                return membership.EndDate > DateTime.Now;
             }
             catch (Exception ex)
             {
@@ -75,7 +78,7 @@ namespace ServiceLayer
         {
             try
             {
-                Member member = memberContext.Read(memberId);
+                Member member = memberContext.Read(memberId, true);
 
                 Membership membership = member.Membership;
                 membership.EndDate = DateTime.Now.AddDays(durationInDays);
