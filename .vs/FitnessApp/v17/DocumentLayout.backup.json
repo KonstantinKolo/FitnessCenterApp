@@ -1,104 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Karch\\FitnessCenterApp\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{4EE39FD7-AE19-4A14-84A6-C8D234E33E54}|DataLayer\\DataLayer.csproj|c:\\users\\karch\\fitnesscenterapp\\datalayer\\fitnessdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EE39FD7-AE19-4A14-84A6-C8D234E33E54}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\fitnessdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EE39FD7-AE19-4A14-84A6-C8D234E33E54}|DataLayer\\DataLayer.csproj|c:\\users\\karch\\fitnesscenterapp\\datalayer\\fitnesscentercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EE39FD7-AE19-4A14-84A6-C8D234E33E54}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\fitnesscentercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\karch\\fitnesscenterapp\\presentationlayer\\loginbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\loginbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\karch\\fitnesscenterapp\\presentationlayer\\loginbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\loginbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\karch\\fitnesscenterapp\\presentationlayer\\loginbutton.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\loginbutton.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FitnessDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Karch\\FitnessCenterApp\\DataLayer\\FitnessDbContext.cs",
-              "RelativeDocumentMoniker": "DataLayer\\FitnessDbContext.cs",
-              "ToolTip": "C:\\Users\\Karch\\FitnessCenterApp\\DataLayer\\FitnessDbContext.cs",
-              "RelativeToolTip": "DataLayer\\FitnessDbContext.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBgAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T05:16:14.163Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FitnessCenterContext.cs",
-              "DocumentMoniker": "C:\\Users\\Karch\\FitnessCenterApp\\DataLayer\\FitnessCenterContext.cs",
-              "RelativeDocumentMoniker": "DataLayer\\FitnessCenterContext.cs",
-              "ToolTip": "C:\\Users\\Karch\\FitnessCenterApp\\DataLayer\\FitnessCenterContext.cs",
-              "RelativeToolTip": "DataLayer\\FitnessCenterContext.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAgwDsAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T05:13:58.101Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoginButton.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\LoginButton.cs",
-              "RelativeDocumentMoniker": "PresentationLayer\\LoginButton.cs",
-              "ToolTip": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\LoginButton.cs [Design]",
-              "RelativeToolTip": "PresentationLayer\\LoginButton.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T05:08:15.562Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginButton.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\LoginButton.Designer.cs",
-              "RelativeDocumentMoniker": "PresentationLayer\\LoginButton.Designer.cs",
-              "ToolTip": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\LoginButton.Designer.cs",
-              "RelativeToolTip": "PresentationLayer\\LoginButton.Designer.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAowEYAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T05:07:15.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginButton.cs",
-              "DocumentMoniker": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\LoginButton.cs",
-              "RelativeDocumentMoniker": "PresentationLayer\\LoginButton.cs",
-              "ToolTip": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\LoginButton.cs",
-              "RelativeToolTip": "PresentationLayer\\LoginButton.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAowCsAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T05:03:15.71Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

@@ -36,6 +36,28 @@ namespace ServiceLayer
             }
         }
 
+        public int GetMemberId(string firstName, string lastName) 
+        {
+            try
+            {
+                List<Member> members = memberContext.ReadAll();
+
+                foreach (Member member in members)
+                {
+                    if (member.FirstName == firstName && member.LastName == lastName)
+                    {
+                        return member.Id;
+                    }
+                }
+
+                throw new ArgumentException("Member not found");
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Could not get member id", ex);
+            }
+        }
+
         public bool IsMembershipValid(int memberId)
         {
             try

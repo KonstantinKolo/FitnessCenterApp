@@ -36,8 +36,8 @@ namespace PresentationLayer
                     FitnessInfo.employeeService.LoggedInEmployeeId = employeeId;
 
                     // Отваряме нова форма (примерно MainForm)
-                    //LoginForm logged = new LoginForm();
-                    //logged.Show();
+                    MemberControllForm memberControllForm = new MemberControllForm();
+                    memberControllForm.Show();
                     this.Hide(); // скриваме login формата
                 }
                 else
