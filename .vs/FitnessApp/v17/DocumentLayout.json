@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Karch\\FitnessCenterApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\karch\\fitnesscenterapp\\presentationlayer\\registerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\registerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\karch\\fitnesscenterapp\\presentationlayer\\registerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\registerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\karch\\fitnesscenterapp\\presentationlayer\\fitnessinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\fitnessinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35CE9831-2180-402E-82F9-534DC5BD1D70}|ServiceLayer\\ServiceLayer.csproj|c:\\users\\karch\\fitnesscenterapp\\servicelayer\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35CE9831-2180-402E-82F9-534DC5BD1D70}|ServiceLayer\\ServiceLayer.csproj|solutionrelative:servicelayer\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\karch\\fitnesscenterapp\\presentationlayer\\loginbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\loginbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\karch\\fitnesscenterapp\\presentationlayer\\loginbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AD64F04-096D-496F-BADA-59CEC67B0698}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\loginbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,69 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RegisterButton.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\RegisterButton.cs",
-              "RelativeDocumentMoniker": "PresentationLayer\\RegisterButton.cs",
-              "ToolTip": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\RegisterButton.cs [Design]",
-              "RelativeToolTip": "PresentationLayer\\RegisterButton.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T12:49:35.187Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MemberService.cs",
-              "DocumentMoniker": "C:\\Users\\Karch\\FitnessCenterApp\\ServiceLayer\\MemberService.cs",
-              "RelativeDocumentMoniker": "ServiceLayer\\MemberService.cs",
-              "ToolTip": "C:\\Users\\Karch\\FitnessCenterApp\\ServiceLayer\\MemberService.cs",
-              "RelativeToolTip": "ServiceLayer\\MemberService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAUwBEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T12:48:07.308Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RegisterButton.cs",
-              "DocumentMoniker": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\RegisterButton.cs",
-              "RelativeDocumentMoniker": "PresentationLayer\\RegisterButton.cs",
-              "ToolTip": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\RegisterButton.cs",
-              "RelativeToolTip": "PresentationLayer\\RegisterButton.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T12:46:19.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginButton.cs [Design]",
+              "Title": "LoginButton.cs",
               "DocumentMoniker": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\LoginButton.cs",
               "RelativeDocumentMoniker": "PresentationLayer\\LoginButton.cs",
-              "ToolTip": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\LoginButton.cs [Design]",
-              "RelativeToolTip": "PresentationLayer\\LoginButton.cs [Design]",
+              "ToolTip": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\LoginButton.cs",
+              "RelativeToolTip": "PresentationLayer\\LoginButton.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowCMAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T12:45:17.951Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FitnessInfo.cs",
-              "DocumentMoniker": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\FitnessInfo.cs",
-              "RelativeDocumentMoniker": "PresentationLayer\\FitnessInfo.cs",
-              "ToolTip": "C:\\Users\\Karch\\FitnessCenterApp\\PresentationLayer\\FitnessInfo.cs",
-              "RelativeToolTip": "PresentationLayer\\FitnessInfo.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T12:38:16.848Z",
+              "WhenOpened": "2025-06-20T05:03:15.71Z",
               "EditorCaption": ""
             }
           ]

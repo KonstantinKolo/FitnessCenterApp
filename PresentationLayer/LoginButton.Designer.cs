@@ -35,6 +35,7 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -67,7 +68,6 @@
             label2.Size = new Size(95, 25);
             label2.TabIndex = 2;
             label2.Text = "Фамилия:";
-            label2.Click += label2_Click;
             // 
             // label3
             // 
@@ -78,7 +78,6 @@
             label3.Size = new Size(82, 25);
             label3.TabIndex = 3;
             label3.Text = "Парола:";
-            label3.Click += label3_Click;
             // 
             // textBox1
             // 
@@ -102,12 +101,24 @@
             textBox3.TabIndex = 6;
             textBox3.UseSystemPasswordChar = true;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 16F);
+            button1.Location = new Point(209, 392);
+            button1.Name = "button1";
+            button1.Size = new Size(124, 41);
+            button1.TabIndex = 7;
+            button1.Text = "LOGIN";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // LoginButton
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 255, 128);
             ClientSize = new Size(554, 536);
+            Controls.Add(button1);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -117,7 +128,6 @@
             Controls.Add(pictureBox1);
             Name = "LoginButton";
             Text = "LoginButton";
-            Load += LoginButton_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -132,5 +142,6 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
+        private Button button1;
     }
 }

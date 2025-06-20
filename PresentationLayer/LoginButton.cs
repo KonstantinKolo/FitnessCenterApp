@@ -12,24 +12,45 @@ namespace PresentationLayer
 {
     public partial class LoginButton : Form
     {
+        
+
         public LoginButton()
         {
             InitializeComponent();
         }
 
-        private void LoginButton_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            string firstName = textBox1.Text.Trim();
+            string lastName = textBox2.Text.Trim();
+            string password = textBox3.Text;
 
+            try
+            {
+                int employeeId = FitnessInfo.employeeService.GetEmployeeId(firstName, lastName, password);
+
+                bool isValid = FitnessInfo.employeeService.TestPassword(employeeId, password);
+
+                if (isValid)
+                {
+                    FitnessInfo.employeeService.LoggedInEmployeeId = employeeId;
+
+                    // Отваряме нова форма (примерно MainForm)
+                    //LoginForm logged = new LoginForm();
+                    //logged.Show();
+                    this.Hide(); // скриваме login формата
+                }
+                else
+                {
+                    MessageBox.Show("Грешна парола.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Грешни данни за вход: " + ex.Message);
+            }
         }
+        
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
