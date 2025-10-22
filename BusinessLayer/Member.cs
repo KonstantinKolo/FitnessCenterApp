@@ -7,31 +7,34 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class Member
-    {
-        [Key]
-        public int Id { get; set; }
+	public class Member
+	{
+		[Key]
+		public int Id { get; set; }
 
-        [Required]
-        [MaxLength(40, ErrorMessage = "Name cannot be more than 40 symbols!")]
-        public string FirstName { get; set; }
+		[Required]
+		[MaxLength(40, ErrorMessage = "Name cannot be more than 40 symbols!")]
+		public string FirstName { get; set; }
 
-        [Required]
-        [MaxLength(40, ErrorMessage = "Name cannot be more than 40 symbols!")]
-        public string LastName { get; set; }
+		[Required]
+		[MaxLength(40, ErrorMessage = "Name cannot be more than 40 symbols!")]
+		public string LastName { get; set; }
 
-        [Required]
-        public Membership Membership { get; set; }
+		[Required]
+		public Membership Membership { get; set; }
 
-        public Member()
-        {
-            
-        }
-        public Member(string firstName, string lastName, Membership membership)
-        {
-            FirstName = firstName;
-            LastName = lastName;
-            Membership = membership;
-        }
-    }
+		public List<Payment> Payments { get; set; } = new List<Payment>();
+
+
+		public Member()
+		{
+
+		}
+		public Member(string firstName, string lastName, Membership membership)
+		{
+			FirstName = firstName;
+			LastName = lastName;
+			Membership = membership;
+		}
+	}
 }

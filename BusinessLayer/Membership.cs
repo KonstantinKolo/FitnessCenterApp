@@ -15,6 +15,8 @@ namespace BusinessLayer
         [Required]
         public DateTime EndDate { get; set; }
 
+        public List<Payment> Payments { get; set; } = new List<Payment>();
+
         public Membership()
         {
             

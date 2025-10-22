@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Ckebfrf4BQU=",
+  "dgSpecHash": "mTZwL/CYepY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Karch\\FitnessCenterApp\\BusinessLayer\\BusinessLayer.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/karch/User/Projects/Personal/C#/FitnessCenterApp/BusinessLayer/BusinessLayer.csproj",
+  "expectedPackageFiles": [
+    "/home/karch/.nuget/packages/microsoft.netcore.app.ref/8.0.16/microsoft.netcore.app.ref.8.0.16.nupkg.sha512",
+    "/home/karch/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.16/microsoft.aspnetcore.app.ref.8.0.16.nupkg.sha512"
+  ],
   "logs": []
 }
