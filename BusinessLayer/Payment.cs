@@ -23,19 +23,19 @@ namespace BusinessLayer
 		public DateTime PaymentDate { get; set; }
 
 		[Required(ErrorMessage = "Payment method is required.")]
-        public PaymentMethod Method { get; set; }
+		public PaymentMethod Method { get; set; }
 
 
-        public Payment()
-        {
-            
-        }
+		public Payment()
+		{
+
+		}
 		public Payment(Member member, decimal amount, DateTime paymentDate, PaymentMethod method)
-        {
-            Member = member;
-            Amount = amount;
-            PaymentDate = paymentDate;
-            Method = method;
-        }
+		{
+			Member = member;
+			Amount = amount;
+			PaymentDate = paymentDate;
+			Method = method;
+		}
 	}
 }
