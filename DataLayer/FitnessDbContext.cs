@@ -35,5 +35,7 @@ namespace DataLayer
         public DbSet<Employee> Employees { get; set; }
 
         public DbSet<Membership> Memberships { get; set; }
+
+        public DbSet<Payment> Payments { get; set; }
     }
 }
