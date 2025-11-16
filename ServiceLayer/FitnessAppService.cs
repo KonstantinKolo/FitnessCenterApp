@@ -14,5 +14,6 @@ namespace ServiceLayer
         static internal FitnessCenterContext fitnessCenterContext = new FitnessCenterContext(dbContext);
         static internal MemberContext memberContext = new MemberContext(dbContext);
         static internal MembershipContext membershipContext = new MembershipContext(dbContext);
+        static internal PaymentContext paymentContext = new PaymentContext(dbContext);
     }
 }
