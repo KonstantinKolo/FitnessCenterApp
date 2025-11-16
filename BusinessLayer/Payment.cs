@@ -11,7 +11,7 @@ namespace BusinessLayer
 		public int Id { get; set; }
 
 		[Required(ErrorMessage = "Member is required.")]
-		public required Member Member { get; set; }
+		public Member Member { get; set; }
 
 		[Required(ErrorMessage = "Amount is required.")]
 		[Range(0.01, double.MaxValue, ErrorMessage = "Amount must be greater than 0.")]
