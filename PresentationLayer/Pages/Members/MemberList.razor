@@ -1,0 +1,201 @@
+@page "/members"
+@inject MemberContext memberContext
+@inject MembershipContext membershipContext
+
+<h3>Members</h3>
+
+@if (!string.IsNullOrEmpty(message))
+{
+    <div class="alert @(isError ? "alert-danger" : "alert-success") alert-dismissible fade show">
+        @message
+        <button type="button" class="btn-close" @onclick="() => message = null"></button>
+    </div>
+}
+
+<button class="btn btn-success mb-3" @onclick="ShowCreateForm">+ Add Member</button>
+
+@if (showForm)
+{
+    <div class="card mb-3">
+        <div class="card-header">@(editingMemberId == null ? "Create New Member" : "Edit Member")</div>
+        <div class="card-body">
+            <EditForm Model="@formModel" OnValidSubmit="SaveMember">
+                <DataAnnotationsValidator />
+                <div class="mb-3">
+                    <label class="form-label">First Name</label>
+                    <InputText class="form-control" @bind-Value="formModel.FirstName" />
+                    <ValidationMessage For="@(() => formModel.FirstName)" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Last Name</label>
+                    <InputText class="form-control" @bind-Value="formModel.LastName" />
+                    <ValidationMessage For="@(() => formModel.LastName)" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Membership End Date</label>
+                    <InputDate class="form-control" @bind-Value="formModel.MembershipEndDate" />
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-secondary" @onclick="CancelForm">Cancel</button>
+            </EditForm>
+        </div>
+    </div>
+}
+
+@if (members == null)
+{
+    <p>Loading...</p>
+}
+else if (members.Count == 0)
+{
+    <p>No members found.</p>
+}
+else
+{
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Membership End Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var member in members)
+            {
+                <tr>
+                    <td>@member.Id</td>
+                    <td>@member.FirstName</td>
+                    <td>@member.LastName</td>
+                    <td>@member.Membership?.EndDate.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        @if (member.Membership != null && member.Membership.EndDate > DateTime.Now)
+                        {
+                            <span class="badge bg-success">Active</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-danger">Expired</span>
+                        }
+                    </td>
+                    <td>
+                        <button class="btn btn-sm btn-warning" @onclick="() => EditMember(member)">Edit</button>
+                        <button class="btn btn-sm btn-danger" @onclick="() => DeleteMember(member.Id)">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Member> members;
+    private string message;
+    private bool isError;
+    private bool showForm;
+    private int? editingMemberId;
+    private MemberFormModel formModel = new();
+
+    public class MemberFormModel
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public DateTime MembershipEndDate { get; set; } = DateTime.Now.AddMonths(1);
+    }
+
+    protected override void OnInitialized()
+    {
+        LoadMembers();
+    }
+
+    private void LoadMembers()
+    {
+        try
+        {
+            members = memberContext.ReadAll(true, true);
+        }
+        catch (Exception ex)
+        {
+            message = "Error loading members: " + ex.Message;
+            isError = true;
+        }
+    }
+
+    private void ShowCreateForm()
+    {
+        editingMemberId = null;
+        formModel = new MemberFormModel();
+        showForm = true;
+    }
+
+    private void EditMember(Member member)
+    {
+        editingMemberId = member.Id;
+        formModel = new MemberFormModel
+        {
+            FirstName = member.FirstName,
+            LastName = member.LastName,
+            MembershipEndDate = member.Membership?.EndDate ?? DateTime.Now.AddMonths(1)
+        };
+        showForm = true;
+    }
+
+    private void SaveMember()
+    {
+        try
+        {
+            if (editingMemberId == null)
+            {
+                Membership membership = new Membership(formModel.MembershipEndDate);
+                membershipContext.Create(membership);
+
+                Member member = new Member(formModel.FirstName, formModel.LastName, membership);
+                memberContext.Create(member);
+                message = "Member created successfully!";
+            }
+            else
+            {
+                Member member = memberContext.Read(editingMemberId.Value, true);
+                member.FirstName = formModel.FirstName;
+                member.LastName = formModel.LastName;
+                member.Membership.EndDate = formModel.MembershipEndDate;
+                membershipContext.Update(member.Membership);
+                memberContext.Update(member, true);
+                message = "Member updated successfully!";
+            }
+
+            isError = false;
+            showForm = false;
+            LoadMembers();
+        }
+        catch (Exception ex)
+        {
+            message = "Error: " + ex.Message;
+            isError = true;
+        }
+    }
+
+    private void DeleteMember(int id)
+    {
+        try
+        {
+            memberContext.Delete(id);
+            message = "Member deleted successfully!";
+            isError = false;
+            LoadMembers();
+        }
+        catch (Exception ex)
+        {
+            message = "Error deleting member: " + ex.Message;
+            isError = true;
+        }
+    }
+
+    private void CancelForm()
+    {
+        showForm = false;
+    }
+}

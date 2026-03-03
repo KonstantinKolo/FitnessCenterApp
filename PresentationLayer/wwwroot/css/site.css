@@ -1,0 +1,4 @@
+body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+.sidebar { position: sticky; top: 0; height: 100vh; }
+.sidebar .nav-link:hover { background-color: rgba(255,255,255,0.1); border-radius: 4px; }
+.table th { background-color: #343a40; color: white; }

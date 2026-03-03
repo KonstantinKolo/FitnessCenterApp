@@ -1,17 +1,33 @@
-namespace PresentationLayer
+using DataLayer;
+using Microsoft.EntityFrameworkCore;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+
+builder.Services.AddDbContext<FitnessDbContext>(options =>
+    options.UseMySQL("Server=192.168.100.6;Database=FitnessDb;Uid=root;Pwd=root;"));
+
+builder.Services.AddScoped<EmployeeContext>();
+builder.Services.AddScoped<FitnessCenterContext>();
+builder.Services.AddScoped<MemberContext>();
+builder.Services.AddScoped<MembershipContext>();
+builder.Services.AddScoped<PaymentContext>();
+
+var app = builder.Build();
+
+if (!app.Environment.IsDevelopment())
 {
-    internal static class Program
-    {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
-        }
-    }
+    app.UseExceptionHandler("/Error");
+    app.UseHsts();
 }
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+
+app.MapBlazorHub();
+app.MapFallbackToPage("/_Host");
+
+app.Run();

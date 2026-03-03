@@ -1,0 +1,172 @@
+@page "/payments"
+@inject PaymentContext paymentContext
+@inject MemberContext memberContext
+
+<h3>Payments</h3>
+
+@if (!string.IsNullOrEmpty(message))
+{
+    <div class="alert @(isError ? "alert-danger" : "alert-success") alert-dismissible fade show">
+        @message
+        <button type="button" class="btn-close" @onclick="() => message = null"></button>
+    </div>
+}
+
+<button class="btn btn-success mb-3" @onclick="ShowCreateForm">+ Add Payment</button>
+
+@if (showForm)
+{
+    <div class="card mb-3">
+        <div class="card-header">@(editingId == null ? "Create New Payment" : "Edit Payment")</div>
+        <div class="card-body">
+            <EditForm Model="@formModel" OnValidSubmit="Save">
+                <DataAnnotationsValidator />
+                <div class="mb-3">
+                    <label class="form-label">Member</label>
+                    <InputSelect class="form-select" @bind-Value="formModel.MemberId">
+                        <option value="0">-- Select Member --</option>
+                        @if (members != null)
+                        {
+                            @foreach (var m in members)
+                            {
+                                <option value="@m.Id">@m.FirstName @m.LastName</option>
+                            }
+                        }
+                    </InputSelect>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Amount</label>
+                    <InputNumber class="form-control" @bind-Value="formModel.Amount" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Payment Date</label>
+                    <InputDate class="form-control" @bind-Value="formModel.PaymentDate" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Payment Method</label>
+                    <InputSelect class="form-select" @bind-Value="formModel.Method">
+                        @foreach (var method in Enum.GetValues<PaymentMethod>())
+                        {
+                            <option value="@method">@method</option>
+                        }
+                    </InputSelect>
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-secondary" @onclick="CancelForm">Cancel</button>
+            </EditForm>
+        </div>
+    </div>
+}
+
+@if (payments == null)
+{
+    <p>Loading...</p>
+}
+else if (payments.Count == 0)
+{
+    <p>No payments found.</p>
+}
+else
+{
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr><th>ID</th><th>Member</th><th>Amount</th><th>Date</th><th>Method</th><th>Actions</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var p in payments)
+            {
+                <tr>
+                    <td>@p.Id</td>
+                    <td>@(p.Member != null ? p.Member.FirstName + " " + p.Member.LastName : "N/A")</td>
+                    <td>@p.Amount.ToString("C")</td>
+                    <td>@p.PaymentDate.ToString("dd/MM/yyyy")</td>
+                    <td><span class="badge bg-info">@p.Method</span></td>
+                    <td>
+                        <button class="btn btn-sm btn-warning" @onclick="() => Edit(p)">Edit</button>
+                        <button class="btn btn-sm btn-danger" @onclick="() => Delete(p.Id)">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Payment> payments;
+    private List<Member> members;
+    private string message;
+    private bool isError, showForm;
+    private int? editingId;
+    private PaymentFormModel formModel = new();
+
+    public class PaymentFormModel
+    {
+        public int MemberId { get; set; }
+        public decimal Amount { get; set; }
+        public DateTime PaymentDate { get; set; } = DateTime.Now;
+        public PaymentMethod Method { get; set; } = PaymentMethod.Cash;
+    }
+
+    protected override void OnInitialized()
+    {
+        Load();
+        try { members = memberContext.ReadAll(false, true); } catch { members = new List<Member>(); }
+    }
+
+    private void Load()
+    {
+        try { payments = paymentContext.ReadAll(true, true); }
+        catch (Exception ex) { message = "Error: " + ex.Message; isError = true; }
+    }
+
+    private void ShowCreateForm() { editingId = null; formModel = new PaymentFormModel(); showForm = true; }
+
+    private void Edit(Payment p)
+    {
+        editingId = p.Id;
+        formModel = new PaymentFormModel
+        {
+            MemberId = p.Member?.Id ?? 0,
+            Amount = p.Amount,
+            PaymentDate = p.PaymentDate,
+            Method = p.Method
+        };
+        showForm = true;
+    }
+
+    private void Save()
+    {
+        try
+        {
+            if (formModel.MemberId == 0) { message = "Select a member!"; isError = true; return; }
+            Member member = memberContext.Read(formModel.MemberId);
+
+            if (editingId == null)
+            {
+                Payment payment = new Payment(member, formModel.Amount, formModel.PaymentDate, formModel.Method);
+                paymentContext.Create(payment);
+                message = "Payment created!";
+            }
+            else
+            {
+                Payment payment = paymentContext.Read(editingId.Value, true);
+                payment.Member = member;
+                payment.Amount = formModel.Amount;
+                payment.PaymentDate = formModel.PaymentDate;
+                payment.Method = formModel.Method;
+                paymentContext.Update(payment, true);
+                message = "Payment updated!";
+            }
+            isError = false; showForm = false; Load();
+        }
+        catch (Exception ex) { message = "Error: " + ex.Message; isError = true; }
+    }
+
+    private void Delete(int id)
+    {
+        try { paymentContext.Delete(id); message = "Deleted!"; isError = false; Load(); }
+        catch (Exception ex) { message = "Error: " + ex.Message; isError = true; }
+    }
+
+    private void CancelForm() { showForm = false; }
+}
